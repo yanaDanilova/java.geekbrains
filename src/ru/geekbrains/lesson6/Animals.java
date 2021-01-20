@@ -22,26 +22,20 @@ public abstract class Animals {
         count++;
     }
     public Animals(String name, int maxDistanceR,float maxHeight){
-        this.name = name;
-        this.maxDistanceR = maxDistanceR;
-        this.maxHeight = maxHeight;
-        count++;
+        this(name, maxDistanceR, 0, maxHeight);
     }
 
 
     public boolean run(int distanceR) {
-        if (distanceR <= maxDistanceR) return true;
-        return false;
+        return distanceR <= maxDistanceR;
     }
 
     public boolean jump(float height){
-        if(height <= maxHeight) return true;
-        return false;
+        return height <= maxHeight;
     }
 
     public boolean swim(int distanceS){
-        if(distanceS <= maxDistanceS) return true;
-        return false;
+        return distanceS <= maxDistanceS;
     }
 
 
